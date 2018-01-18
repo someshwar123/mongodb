@@ -1,0 +1,13 @@
+  h1 #{title}
+  form(method='POST', action='/articles/edit/'+article._id)
+    #form-group
+      label city:
+      input.form-control(name='city', type='text', value=article.title)
+    #form-group
+      label address:
+      input.form-control(name='address', type='text', value=article.author)
+    #form-group
+      label Body:
+      textarea.form-control(name='body')= article.body
+    br
+    input.btn.btn-primary(type='submit',value='Submit')
